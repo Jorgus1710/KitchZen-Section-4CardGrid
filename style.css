@@ -1,0 +1,203 @@
+
+/* 
+font-family: 'Lato', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; 
+*/
+
+* {
+    /* font-family: 'Open Sans', sans-serif; */
+}
+
+
+.section-1 .card {
+    border: 1px rgb(133, 133, 133) solid;
+    box-shadow: rgba(0, 0, 0, 0.15) .4rem .4rem .2rem;
+    /* display flex for footer to stick at bottom  */
+    display: flex;
+    flex-direction: column;
+    /* max-width: 19.2rem;
+    min-width: 18.5rem; */
+    transition: box-shadow 1.3s;
+    transition: ease-in-out .5s;
+    
+}
+
+.section-1 .img-wrapper {
+    overflow: hidden;
+}
+
+.section-1 .card h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #555454;
+    font-size: 1.4rem;
+    letter-spacing: -.06rem;
+    word-spacing: 0.12rem;
+    line-height: 1.6rem;
+
+    text-align: left;
+    padding: .85rem 1.3rem .25rem 1.3rem;
+
+}
+
+.section-1 .card p {
+    font-family: 'Lato', sans-serif;
+    color: #797979;
+    font-weight:400;
+    font-size: 1rem;
+    letter-spacing: -.005rem;
+    word-spacing: 0.12rem;
+    line-height: 1.2rem;
+
+    text-align: left;
+    padding: .1rem 1.3rem;
+}
+
+/* To make the whole card clickable i wrapped the inner contents of the card with an 
+a tag. It caused text-decortation so i turned that off  */
+
+
+.section-1 .card a {
+    text-decoration: none;
+    
+}
+
+
+
+.section-1 .card-img {
+    width: 100%;
+    border-bottom: 1px rgb(49, 49, 49) solid;
+    transition: ease-out .4s;
+}
+
+.section-1 .grid-wrapper {
+    /* height: 100vh; */
+
+    /* margin: 1rem 15.5rem; */
+    margin: 0 auto;
+    justify-content: center;
+
+
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(4, 1fr); */
+    grid-template-columns: repeat(auto-fit, minmax(18.5rem, 19rem));
+    gap: 4rem;
+}
+
+
+.section-1 .border-line {
+    border-top: .1rem solid rgb(170, 170, 170);
+    padding-bottom: .8rem;
+}
+
+.section-1 .footer {
+    padding: .8rem 1.3rem;
+    margin-top: auto;
+}
+
+
+
+
+.section-1 .card:hover .card-img {
+    /* transform: scale(1.25) rotate(2deg); */
+} 
+
+
+
+
+/* -------------   Card button hover effects -------------------- */
+
+.section-1 .footer .btn {
+    transition: ease-out 0.3s;
+}
+
+/* .section-1 .footer .btn:hover {
+    transition: ease-out 0.3s;
+    background-color: white;
+    color: rgb(59, 170, 32);
+    border: grey solid 1px;
+} */
+
+/* ----- Put in your hover effects into this media query below to fix the sticky hover effect
+on mobile devices. Example without it is commented out above ------------ */
+
+@media (hover: hover) and (pointer: fine) {
+    .section-1 .footer .btn:hover {
+        transition: ease-out 0.3s;
+        background-color: white;
+        color: rgb(59, 170, 32);
+        border: grey solid 1px;
+        
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .section-1 .card:hover {
+        transform: scale(1.025);
+        transition: ease-out .5s;
+        box-shadow: rgba(0, 0, 0, 0.15) .6rem .6rem .7rem;
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .section-1 .card:hover .card-img {
+        transform: scale(1.1) rotate(2deg);
+        /* box-shadow: rgba(0, 0, 0, 0.15) 1.8rem 1.8rem .1rem; */
+        
+    } 
+}
+
+
+
+.section-1 .time {
+    display: flex;
+    justify-content:space-between;
+}
+
+.section-1 .img-clock {
+    width: 1.2rem;
+    padding-right: .3rem;
+    
+}
+
+.section-1 .duration {
+    font-family: 'Roboto', sans-serif;
+    font-size: .75rem;
+    display: flex;
+    align-items: center;
+}
+
+
+.section-1 .time .btn {
+    text-decoration: none;
+    background-color: #3BAA20;
+    border: 1px solid #3BAA20;
+    padding: .4rem 1rem;
+    border-radius: .4rem;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight:600
+}
+
+
+
+
+
+/* Grid is forced to make 2 rows between the MediaQuery ranges listed below. Otherwise it 
+would auto fit 3 with an extra row of one card underneath for some views  */
+
+@media screen and (min-width: 1057px) {
+    .section-1 .grid-wrapper {
+        grid-template-columns: repeat(2, minmax(18.5rem, 19rem));
+    }
+}
+
+@media screen and (min-width: 1424px) {
+    .section-1 .grid-wrapper {
+        grid-template-columns: repeat(4, minmax(18.5rem, 19rem));
+    }
+}
