@@ -190,7 +190,7 @@ on mobile devices. Example without it is commented out above ------------ */
 /* Grid is forced to make 2 rows between the MediaQuery ranges listed below. Otherwise it 
 would auto fit 3 with an extra row of one card underneath for some views  */
 
-@media screen and (min-width: 1057px) {
+@media screen and (min-width: 1040px) {
     .section-1 .grid-wrapper {
         grid-template-columns: repeat(2, minmax(18.5rem, 19rem));
     }
